@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #fff;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 93%;
+        /*height: 93%;*/
+    }
+     @media screen and (min-width: 801px) {
+   .swiper-container {
+        width: 91%;
+        height: 91%;
+        }
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-slide img{
+        width: 100%;
+        /*height:100%;*/
+    }
+    @media screen and (min-width: 801px) {
+   .swiper-slide img{
+        width: 880px;
+        /*height:100%;*/
+    }
+}
+    .title{
+        text-align: center;
+    /* background-color: #333; */
+    color: #333;
+    font-size: 22px;
+    line-height: 60px;
+    }
+    
+    </style>
+</head>
+<body>
+    <h5 class="title">我的好朋友</h5>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/1.jpg"/></div>
+            <div class="swiper-slide"><img src="images/1.jpg"/></div>
+            <div class="swiper-slide"><img src="images/1.jpg"/></div>
+            <div class="swiper-slide"><img src="images/1.jpg"/></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30,
+        autoplay: 3000,//可选选项，自动滑动
+    });
+    </script>
+</body>
+</html>
